@@ -12,6 +12,7 @@ html, body {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .container {
@@ -23,6 +24,8 @@ a {
 ul {
     list-style-type: none;
 }
+
+/* Header */
 
 .header {
     height: 120px;
@@ -53,6 +56,8 @@ li a {
     font-size: 17px;
     line-height: 1.58824;
 }
+
+/* Section 1 */
 
 .hero {
     height: auto;
@@ -118,6 +123,36 @@ li a {
 .app-list {
     display: flex;
     gap: 17px;
+}
+
+/* Section 2 */
+
+.episode-section {
+    background: #191919;
+}
+
+.episode-title {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.2375;
+    letter-spacing: 0.05em;
+}
+
+.view-all-button {
+    border-radius: 6px;
+    width: 178px;
+    height: 51px;
+    background: #118da8;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.58824;
+}
+
+.card {
+    border-radius: 32px;
+    width: 1300px;
+    height: 545px;
+    background: #000;
 }
 
 

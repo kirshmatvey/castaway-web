@@ -10,6 +10,10 @@ html, body {
     color: #fff;
 }
 
+button {
+    border: none;
+}
+
 a {
     text-decoration: none;
     color: #fff;
@@ -129,6 +133,7 @@ li a {
 
 .episode-section {
     background: #191919;
+    height: auto;
 }
 
 .episode-title {
@@ -154,5 +159,59 @@ li a {
     height: 545px;
     background: #000;
 }
+
+.topic-box {
+    background: #191919;
+    border-radius: 6px;
+    width: max-content;
+    height: 27px;
+    padding: 0 16px
+}
+
+.card-topic {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.58824;
+}
+
+.episode-number {
+    font-weight: 400;
+    color: #118da8;
+}
+
+.card-episode {
+    font-size: 17px;
+    line-height: 1.58824;
+}
+
+.card-title {
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+}
+
+.card-description {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.card-button {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    border-radius: 6px;
+    width: 208px;
+    height: 51px;
+    background: #118da8;
+}
+
+
+
+
+
 
 

@@ -178,11 +178,15 @@ li a {
 .card {
     border-radius: 32px;
     width: 1300px;
-    height: 545px;
+    height: auto;
     background: #000;
     display: flex;
     gap: 53px;
     padding: 40px
+}
+
+.card-content {
+    align-self: flex-end;
 }
 
 .topic-box {
@@ -190,7 +194,8 @@ li a {
     border-radius: 6px;
     width: max-content;
     height: 27px;
-    padding: 0 16px
+    padding: 0 16px;
+    margin-bottom: 48px;
 }
 
 .card-topic {
@@ -202,6 +207,7 @@ li a {
 .episode-number {
     font-weight: 400;
     color: #118da8;
+    margin-bottom: 18px;
 }
 
 .card-episode {
@@ -225,6 +231,7 @@ li a {
     font-size: 64px;
     line-height: 1.1;
     letter-spacing: 0.04em;
+    margin-bottom: 28px;
 }
 
 .card-description {
@@ -232,6 +239,7 @@ li a {
     font-size: 22px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 18px;
 }
 
 .card-button {

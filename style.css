@@ -25,7 +25,7 @@ a {
 
 .container {
     width: 100%;
-    margin: 0 20px;
+    margin: 0 auto;
     max-width: 1300px;
 }
 
@@ -72,8 +72,8 @@ li a {
     width: 100%;
     background: #191919;
     padding: 40px 0;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
 }
 
 .hero-wrapper {
@@ -138,8 +138,8 @@ li a {
 .episode-section {
     background: #191919;
     height: auto;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
     padding: 100px 0 160px;
 }
 

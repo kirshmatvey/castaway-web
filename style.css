@@ -246,12 +246,71 @@ li a {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
-    color: #fff;
     border-radius: 6px;
     width: 208px;
     height: 51px;
     background: #118da8;
 }
+
+/*Section 3*/
+
+.host-section {
+    background: #191919;
+    padding: 100px 0;
+}
+
+.host-section-wrapper {
+    display: flex;
+}
+
+.host-description-wrapper {
+    align-self: center;
+}
+
+.pointer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.pointer {
+    width: 112px;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #118da8;
+    margin-bottom: 20px;
+}
+
+.pointer-caption {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #118da8;
+}
+
+.host-name {
+    margin-bottom: 30px;
+}
+
+.host-section p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.host-description {
+    margin-bottom: 35px;
+}
+
+.host-image {
+    border-radius: 12px;
+}
+
+
+
 
 
 

@@ -250,6 +250,7 @@ li a {
     width: 208px;
     height: 51px;
     background: #118da8;
+    color: #ffffff;
 }
 
 /*Section 3*/
@@ -308,6 +309,88 @@ li a {
 .host-image {
     border-radius: 12px;
 }
+
+/*Section 4*/
+
+.subscription-section {
+    background: #191919;
+    padding: 100px 0;
+}
+
+.subscription-card {
+    background: #000;
+    height: 390px;
+    border-radius: 32px;
+    padding: 60px 60px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription-description-wrapper {
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-caption {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #118da8;
+}
+
+.subscription-title {
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    max-width: 430px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subscription-input {
+    border: 1px solid #191919;
+    border-radius: 6px;
+    width: 522px;
+    height: 82px;
+    background: #191919;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="email"]::placeholder, input[type="text"]::placeholder {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.submit-button {
+    border-radius: 6px;
+    width: 87px;
+    height: 48px;
+    border: none;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 1.92;
+    color: rgba(255, 255, 255, 0.7);
+    align-self: flex-start;
+}
+
+
+
+
+
 
 
 

@@ -33,6 +33,10 @@ ul {
     list-style-type: none;
 }
 
+section {
+    background: #191919;
+}
+
 /* Header */
 
 .header {
@@ -70,7 +74,6 @@ li a {
 .hero {
     height: auto;
     width: 100%;
-    background: #191919;
     padding: 40px 0;
     /*display: flex;*/
     /*justify-content: center;*/
@@ -136,7 +139,6 @@ li a {
 /* Section 2 */
 
 .episode-section {
-    background: #191919;
     height: auto;
     /*display: flex;*/
     /*justify-content: center;*/
@@ -256,7 +258,6 @@ li a {
 /*Section 3*/
 
 .host-section {
-    background: #191919;
     padding: 100px 0;
 }
 
@@ -313,7 +314,6 @@ li a {
 /*Section 4*/
 
 .subscription-section {
-    background: #191919;
     padding: 100px 0;
 }
 
@@ -386,6 +386,47 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
     color: rgba(255, 255, 255, 0.7);
     align-self: flex-start;
 }
+
+/*Section 5*/
+
+.ratings-section {
+    padding: 100px 0;
+}
+
+.feedback-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.feedback-card {
+    border-radius: 32px;
+    background-color: #000000;
+    padding: 50px;
+    max-width: 420px;
+}
+
+.feedback-stars {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.feedback {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.feedback-author {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 1.25217;
+    color: rgba(255, 255, 255, 0.7);
+}
+
 
 
 

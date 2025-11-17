@@ -427,6 +427,54 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/*Footer*/
+
+.footer {
+    background: #191919;
+    padding: 100px 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-logo-wrapper, .footer .app-list {
+    max-width: 450px;
+    width: 100%;
+}
+
+.navigation-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer nav {
+    max-width: 180px;
+    width: 100%;
+}
+
+.navigation-wrapper a {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 1.58824;
+}
+
+.logo {
+    width: 224px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
 
 
 

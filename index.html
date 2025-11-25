@@ -18,12 +18,12 @@
             <a href="">
                 <img src="./assets/images/LOGO.svg" alt="logo">
             </a>
-            <nav class="navigation">
+            <nav class="header-navigation">
                 <ul class="header-menu">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Episodes</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#episodes">Episodes</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,7 +31,7 @@
 
 <!-- Section 1 -->
 
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
             <div class="hero-wrapper">
                 <img class="hero-image" src="./assets/images/IMAGE.png" alt="main-image">
@@ -44,7 +44,10 @@
                         </div>
                     </div>
                     <div>
-                        <span class="hero-span">Listen on</span>
+                        <div class="hero-span-wrapper">
+                            <span class="hero-span">Listen on</span>
+                        </div>
+
                         <ul class="app-list">
                             <li><a href=""><img src="./assets/images/IMAGEsp.png" alt="spotify"></a></li>
                             <li><a href=""><img src="./assets/images/IMAGE%20(4).png" alt="pocket-cast"></a></li>
@@ -60,7 +63,7 @@
 
 <!-- Section 2 -->
 
-    <section class="episode-section">
+    <section class="episode-section" id="episodes">
         <div class="container">
             <div class="episode-section-header">
                 <h2 class="episode-title">Latest episodes</h2>
@@ -80,8 +83,8 @@
                             <span class="card-number"></span>
                         </div>
                         <h3 class="card-title">The best microphone under $200</h3>
-                        <p class="card-description">With so many microphones on the market, how are you supposed to know what’s the best? Take a look at our top picks.</p>
-                        <button class="card-button"><a href="">View Episode Details</a>></button>
+                        <p class="description">With so many microphones on the market, how are you supposed to know what’s the best? Take a look at our top picks.</p>
+                        <button class="card-button"><a href="">View Episode Details</a></button>
                     </div>
                 </article>
 
@@ -96,7 +99,7 @@
                             <span class="card-number"></span>
                         </div>
                         <h3 class="card-title">Mic tricks to take you to the next level</h3>
-                        <p class="card-description">Stop rolling with those default settings on your mic. These small tweaks will take you from sounding good to great.</p>
+                        <p class="description">Stop rolling with those default settings on your mic. These small tweaks will take you from sounding good to great.</p>
                         <button class="card-button"><a href="">View Episode Details</a></button>
                     </div>
                 </article>
@@ -112,7 +115,7 @@
                             <span class="card-number"></span>
                         </div>
                         <h3 class="card-title">Should you get outboard audio gear?</h3>
-                        <p class="card-description">Is hardware really worth it when it comes to podcasting? The answer is...it depends. Here’s our reasons on why you might want to consider picking something up.</p>
+                        <p class="description">Is hardware really worth it when it comes to podcasting? The answer is...it depends. Here’s our reasons on why you might want to consider picking something up.</p>
                         <button class="card-button"><a href="">View Episode Details</a></button>
                     </div>
                 </article>
@@ -122,7 +125,7 @@
 
 <!--Section 3-->
 
-    <section class="host-section">
+    <section class="host-section" id="about">
         <div class="container">
             <div class="host-section-wrapper">
                 <div class="host-description-wrapper">
@@ -133,8 +136,8 @@
                         <span class="pointer-caption">Meet your host</span>
                     </div>
                     <h2 class="host-name episode-title">Jacob Paulaner</h2>
-                    <p class="host-description">Jacob has a background in audio engineering, and has been podcasting since the early days.</p>
-                    <p>He’s here to help you level up your game by sharing everything he’s learned along the way.</p>
+                    <p class="description">Jacob has a background in audio engineering, and has been podcasting since the early days.</p>
+                    <p class="description">He’s here to help you level up your game by sharing everything he’s learned along the way.</p>
                 </div>
                 <img class="host-image" src="./assets/images/Jacob.png" alt="Host-Image">
             </div>
@@ -153,7 +156,7 @@
                 <form class="form-wrapper" action="">
                     <input class="subscription-input" type="text" placeholder="Name">
                     <input class="subscription-input" type="email" placeholder="Email">
-                    <input class="view-all-button submit-button" type="submit" value="Submit">
+                    <button class="submit-button" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -236,48 +239,48 @@
 
 <!--Footer-->
 
-<footer class="footer">
-    <div class="container">
-        <div class="footer-wrapper">
-            <div class="footer-logo-wrapper">
-                <a href="">
-                    <img class="logo" src="./assets/images/LOGO.svg" alt="logo">
-                </a>
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-logo-wrapper">
+                    <a href="">
+                        <img class="logo" src="./assets/images/LOGO.svg" alt="logo">
+                    </a>
 
-                <ul class="social-links">
-                    <li><a href=""><img src="./assets/images/INST.svg" alt="Instagram"></a></li>
-                    <li><a href=""><img src="./assets/images/Twitter.svg" alt="Twitter"></a></li>
-                    <li><a href=""><img src="./assets/images/Facebook.svg" alt="Facebook"></a></li>
+                    <ul class="social-links">
+                        <li><a href=""><img src="./assets/images/INST.svg" alt="Instagram"></a></li>
+                        <li><a href=""><img src="./assets/images/Twitter.svg" alt="Twitter"></a></li>
+                        <li><a href=""><img src="./assets/images/Facebook.svg" alt="Facebook"></a></li>
+                    </ul>
+
+                </div>
+                <nav>
+                    <ul class="navigation-wrapper">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#episodes">Episodes</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <ul class="navigation-wrapper">
+                        <li><a href="">Style Guide</a></li>
+                        <li><a href="">Instructions</a></li>
+                        <li><a href="">Changelog</a></li>
+                        <li><a href="">Credit</a></li>
+                        <li><a href="">Powered by Webflow</a></li>
+                        <li><a href="">Licenses</a></li>
+                    </ul>
+                </nav>
+                <ul class="app-list">
+                    <li><a href=""><img src="./assets/images/IMAGEsp.png" alt="spotify"></a></li>
+                    <li><a href=""><img src="./assets/images/IMAGE%20(4).png" alt="pocket-cast"></a></li>
+                    <li><a href=""><img src="./assets/images/IMAGE%20(2).png" alt="soundcloud"></a></li>
+                    <li><a href=""><img src="./assets/images/IMAGE%20(3).png" alt="itunes"></a></li>
+                    <li><a href=""><img src="./assets/images/IMAGE%20(1).png" alt="overcast"></a></li>
                 </ul>
-
             </div>
-            <nav>
-                <ul class="navigation-wrapper">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Episodes</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-            <nav>
-                <ul class="navigation-wrapper">
-                    <li><a href="">Style Guide</a></li>
-                    <li><a href="">Instructions</a></li>
-                    <li><a href="">Changelog</a></li>
-                    <li><a href="">Credit</a></li>
-                    <li><a href="">Powered by Webflow</a></li>
-                    <li><a href="">Licenses</a></li>
-                </ul>
-            </nav>
-            <ul class="app-list">
-                <li><a href=""><img src="./assets/images/IMAGEsp.png" alt="spotify"></a></li>
-                <li><a href=""><img src="./assets/images/IMAGE%20(4).png" alt="pocket-cast"></a></li>
-                <li><a href=""><img src="./assets/images/IMAGE%20(2).png" alt="soundcloud"></a></li>
-                <li><a href=""><img src="./assets/images/IMAGE%20(3).png" alt="itunes"></a></li>
-                <li><a href=""><img src="./assets/images/IMAGE%20(1).png" alt="overcast"></a></li>
-            </ul>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>

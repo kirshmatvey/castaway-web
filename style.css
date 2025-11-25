@@ -8,14 +8,22 @@ html, body {
     font-family: 'DM-Sans', sans-serif;
     font-style: normal;
     color: #fff;
+    font-weight: 400;
+    scroll-behavior: smooth;
 }
 
 body {
     counter-reset: card-counter
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+}
+
 button {
-    border: none;
+    border: 1px solid rgba(17, 141, 168, 0);
+    padding: 12px 20px;
+    background-color: rgba(17, 141, 168, 1);
 }
 
 a {
@@ -53,8 +61,10 @@ section {
 }
 
 
-.navigation {
+.header-navigation {
     display: flex;
+    font-size: 17px;
+    line-height: 1.58824;
 }
 
 .header-menu {
@@ -62,12 +72,6 @@ section {
     gap: 40px;
 }
 
-li a {
-    color: #fff;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 1.58824;
-}
 
 /* Section 1 */
 
@@ -75,8 +79,6 @@ li a {
     height: auto;
     width: 100%;
     padding: 40px 0;
-    /*display: flex;*/
-    /*justify-content: center;*/
 }
 
 .hero-wrapper {
@@ -98,14 +100,13 @@ li a {
 }
 
 .hero-title {
-    font-weight: 400;
     font-size: 70px;
     line-height: 1.25714;
     letter-spacing: 0.05em;
+    font-weight: inherit;
 }
 
 .hero-subtitle {
-    font-weight: 400;
     font-size: 75px;
     line-height: 1.17333;
     letter-spacing: 0.04em;
@@ -125,9 +126,11 @@ li a {
 }
 
 .hero-span {
-    font-weight: 400;
     font-size: 15px;
     line-height: 1.6;
+}
+
+.hero-span-wrapper {
     margin-bottom: 15px;
 }
 
@@ -139,9 +142,6 @@ li a {
 /* Section 2 */
 
 .episode-section {
-    height: auto;
-    /*display: flex;*/
-    /*justify-content: center;*/
     padding: 100px 0 160px;
 }
 
@@ -153,7 +153,6 @@ li a {
 }
 
 .episode-title {
-    font-weight: 400;
     font-size: 64px;
     line-height: 1.2375;
     letter-spacing: 0.05em;
@@ -162,10 +161,7 @@ li a {
 
 .view-all-button {
     border-radius: 6px;
-    width: 178px;
-    height: 51px;
-    background: #118da8;
-    font-weight: 400;
+    padding: 12px 20px;
     font-size: 17px;
     line-height: 1.58824;
     align-self: center;
@@ -178,13 +174,12 @@ li a {
 }
 
 .card {
-    border-radius: 32px;
+    border-radius: 30px;
     width: 1300px;
-    height: auto;
     background: #000;
     display: flex;
-    gap: 53px;
-    padding: 40px
+    gap: 50px;
+    padding: 40px;
 }
 
 .card-content {
@@ -195,19 +190,16 @@ li a {
     background: #191919;
     border-radius: 6px;
     width: max-content;
-    height: 27px;
     padding: 0 16px;
     margin-bottom: 48px;
 }
 
 .card-topic {
-    font-weight: 400;
     font-size: 17px;
     line-height: 1.58824;
 }
 
 .episode-number {
-    font-weight: 400;
     color: #118da8;
     margin-bottom: 18px;
 }
@@ -218,7 +210,6 @@ li a {
 }
 
 .card-number {
-    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -229,30 +220,26 @@ li a {
 }
 
 .card-title {
-    font-weight: 400;
     font-size: 64px;
     line-height: 1.1;
     letter-spacing: 0.04em;
     margin-bottom: 28px;
 }
 
-.card-description {
-    font-weight: 400;
+.description {
     font-size: 22px;
     line-height: 1.5;
     color: rgba(255, 255, 255, 0.7);
+}
+
+.card .description {
     margin-bottom: 18px;
 }
 
 .card-button {
-    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     border-radius: 6px;
-    width: 208px;
-    height: 51px;
-    background: #118da8;
-    color: #ffffff;
 }
 
 /*Section 3*/
@@ -277,16 +264,15 @@ li a {
 .pointer {
     width: 112px;
     height: 112px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     background-color: #118da8;
     margin-bottom: 20px;
 }
 
 .pointer-caption {
-    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     color: #118da8;
@@ -296,14 +282,7 @@ li a {
     margin-bottom: 30px;
 }
 
-.host-section p {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.host-description {
+.host-section .description {
     margin-bottom: 35px;
 }
 
@@ -333,14 +312,12 @@ li a {
 }
 
 .subscription-caption {
-    font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
     color: #118da8;
 }
 
 .subscription-title {
-    font-weight: 400;
     font-size: 72px;
     line-height: 1.1;
     letter-spacing: 0.04em;
@@ -354,22 +331,17 @@ li a {
 }
 
 .subscription-input {
-    border: 1px solid #191919;
+    border: 1px solid #303030;
     border-radius: 6px;
-    width: 522px;
-    height: 82px;
+    width: 520px;
+    height: 80px;
     background: #191919;
-    padding: 0 20px;
+    padding: 25px 0 25px 20px;
     display: flex;
     align-items: center;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.2;
-    color: rgba(255, 255, 255, 0.7);
 }
 
 input[type="email"]::placeholder, input[type="text"]::placeholder {
-    font-weight: 400;
     font-size: 24px;
     line-height: 1.2;
     color: rgba(255, 255, 255, 0.7);
@@ -377,9 +349,7 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
 
 .submit-button {
     border-radius: 6px;
-    width: 87px;
-    height: 48px;
-    border: none;
+    padding: 10px 15px;
     font-weight: 700;
     font-size: 15px;
     line-height: 1.92;
@@ -414,14 +384,12 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
 }
 
 .feedback {
-    font-weight: 400;
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
 
 .feedback-author {
-    font-weight: 400;
     font-size: 23px;
     line-height: 1.25217;
     color: rgba(255, 255, 255, 0.7);
@@ -455,12 +423,6 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
     width: 100%;
 }
 
-.navigation-wrapper a {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 1.58824;
-}
-
 .logo {
     width: 224px;
     margin-bottom: 20px;
@@ -470,6 +432,63 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
     display: flex;
     gap: 10px;
 }
+
+/*    Изменение элементов при наведении    */
+
+.header-navigation a, .navigation-wrapper a {
+    transition: 0.2s;
+}
+
+.header-navigation  a:hover, .navigation-wrapper a:hover {
+    color: #118da8;
+}
+
+.app-list li {
+    transition: 0.2s;
+}
+
+.app-list li:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: rgba(17, 141, 168, 0);
+    border-color: rgba(17, 141, 168, 1);
+}
+
+.pointer {
+    transition: 0.3s;
+}
+
+.pointer:hover {
+    transform: rotate(90deg);
+}
+
+.social-links li {
+    transition: 0.2s;
+}
+
+.social-links li:hover {
+    transform: translateY(-5px);
+}
+
+.subscription-input {
+    transition: 0.2s;
+}
+
+.subscription-input:focus {
+    outline: 1px solid #454444;
+
+}
+
+
+
+
+
 
 
 

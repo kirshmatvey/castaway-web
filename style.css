@@ -355,6 +355,7 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
     line-height: 1.92;
     color: rgba(255, 255, 255, 0.7);
     align-self: flex-start;
+    cursor: pointer;
 }
 
 /*Section 5*/

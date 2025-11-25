@@ -482,7 +482,46 @@ button:hover {
 
 .subscription-input:focus {
     outline: 1px solid #454444;
+}
 
+/*    Добавление псевдоэлементов    */
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image-wrapper::before {
+    content: url('./assets/images/picture-decoration.svg');
+    position: absolute;
+    top: -30px;
+    left: -30px;
+}
+
+.hero-subtitle {
+    position: relative;
+}
+
+.hero-subtitle::before {
+    content: '';
+    display: inline-block;
+    background-image: url('./assets/images/text-underline-decoration.svg');
+    position: absolute;
+    width: 165px;
+    height: 10px;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+}
+
+.subscription-card {
+    position: relative;
+}
+
+.subscription-card::before {
+    content: url('./assets/images/block-decoration.svg');
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
 }
 
 

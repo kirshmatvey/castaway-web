@@ -4,10 +4,6 @@
     padding: 0;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 html, body {
     font-family: 'DM-Sans', sans-serif;
     font-style: normal;
@@ -17,6 +13,7 @@ html, body {
 }
 
 body {
+    overflow-x: hidden;
     counter-reset: card-counter;
     background: #191919;
     min-width: 375px;
@@ -55,6 +52,11 @@ ul {
     padding: 40px 0;
     display: flex;
     justify-content: center;
+    background: #191919;
+    position: sticky;
+    width: 100%;
+    z-index: 100;
+    top: 0;
 }
 
 .header .container {
@@ -71,6 +73,10 @@ ul {
 }
 
 .burger-menu-icon {
+    display: none;
+}
+
+.burger-menu-closer {
     display: none;
 }
 
@@ -332,6 +338,9 @@ ul {
 }
 
 .subscription-input {
+    font-size: 23px;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.7);
     border: 1px solid #303030;
     border-radius: 6px;
     width: 520px;
@@ -345,7 +354,7 @@ ul {
 input[type="email"]::placeholder, input[type="text"]::placeholder {
     font-size: 24px;
     line-height: 1.2;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(174, 174, 174, 0.7);
 }
 
 .submit-button {
@@ -646,6 +655,30 @@ button:hover {
         row-gap: 60px;
     }
 
+    /*Стили для бургер меню*/
+
+    .header-burger-menu {
+        height: 100%;
+    }
+
+    .page-cover {
+        position: fixed; /* Фиксируем относительно viewport */
+        bottom: 0;
+        left: 0;
+        width: 100%; /* 100% ширины viewport */
+        height: calc(100% - 128px); /* 100% высоты viewport */
+        background: rgba(25, 25, 25, 0.1); /* Полупрозрачный белый фон */
+        backdrop-filter: blur(15px); /* Эффект размытия фона */
+        z-index: 500; /* Чтобы был поверх всего */
+    }
+
+    header .burger-menu-opened {
+        display: none;
+    }
+
+    header .burger-menu-closed {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -745,6 +778,7 @@ button:hover {
         gap: 75px
     }
 }
+
 
 
 

@@ -659,19 +659,30 @@ button:hover {
 
     /*Стили для бургер меню*/
 
-    .header-burger-menu {
-        height: 100%;
-    }
-
     .page-cover {
         position: fixed; /* Фиксируем относительно viewport */
-        bottom: 0;
+        top: -100%;
         left: 0;
         width: 100%; /* 100% ширины viewport */
-        height: calc(100% - 128px); /* 100% высоты viewport */
+        height: 100%; /* 100% высоты viewport */
         background: rgba(25, 25, 25, 0.5); /* Полупрозрачный белый фон */
         backdrop-filter: blur(25px); /* Эффект размытия фона */
         z-index: 500; /* Чтобы был поверх всего */
+        transition: top 0.3s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-cover ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .page-cover-open {
+        top: 0 !important;
     }
 
     header .burger-menu-opened {
@@ -682,26 +693,7 @@ button:hover {
         display: block;
     }
 
-    .list-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 501;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .burger-menu-list {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .burger-menu-list li {
+    .page-cover li {
         align-self: center;
         font-family: "DM Sans", sans-serif;
         font-weight: 600;
@@ -808,28 +800,3 @@ button:hover {
         gap: 75px
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

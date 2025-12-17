@@ -1,89 +1,83 @@
-const burgerMenu = document.querySelector('.burger-menu-icon');
-const burgerMenuCloser = document.querySelector('.burger-menu-closer');
+if (document.body.offsetWidth < 1140) {
+    const model = {
+        burgerMenu: document.querySelector('.burger-menu-icon'),
+        burgerMenuCloser: document.querySelector('.burger-menu-closer'),
+        listWrapper: document.querySelector('.header-navigation'),
+        list: document.querySelector('.header-menu'),
 
-const model = {
-    list: [
-        {id: Date.now(), content: 'Home', link: '#home'},
-        {id: Date.now(), content: 'Episodes', link: '#episodes'},
-        {id: Date.now(), content: 'About', link: '#about'},
-        {id: Date.now(), content: 'Contact', link: '#contact'},
-    ]
+        menuOpen() {
+            const blur = document.querySelector('#cover');
+            blur.classList.add('page-cover-open');
+
+            this.burgerMenu.classList.add('burger-menu-opened');
+            this.burgerMenu.classList.remove('burger-menu-closed');
+
+            this.burgerMenuCloser.classList.add('burger-menu-closed');
+            this.burgerMenuCloser.classList.remove('burger-menu-opened');
+
+            this.listWrapper.classList.add('list-container');
+        },
+
+        menuClose() {
+            const blur = document.querySelector('#cover');
+            blur.classList.remove('page-cover-open');
+
+            this.burgerMenu.classList.add('burger-menu-closed');
+            this.burgerMenu.classList.remove('burger-menu-opened');
+
+            this.burgerMenuCloser.classList.add('burger-menu-opened');
+            this.burgerMenuCloser.classList.remove('burger-menu-closed');
+
+            this.listWrapper.classList.remove('list-container');
+        },
+    }
+
+    const view = {
+        init() {
+            const header = document.querySelector('.header');
+            const menuList = document.querySelector('.header-menu');
+            let menuOpened = false;
+
+            header.addEventListener('click', (event) => {
+                if (event.target.classList.contains('burger-menu-icon')) {
+                    controller.menuOpen()
+                    menuOpened = true;
+                } else if (event.target.classList.contains('burger-menu-closer')) {
+                    controller.menuClose()
+                }
+            })
+
+            menuList.addEventListener('click', (event) => {
+                if (event.target.classList.contains('header-menu-item') && menuOpened === true) {
+                    controller.menuClose()
+                }
+            })
+
+            this.render()
+        },
+
+        render() {
+            const blur = model.listWrapper;
+            blur.setAttribute('id', 'cover');
+            blur.classList.add('page-cover');
+
+            document.body.insertBefore(blur, document.body.lastChild);
+        },
+    }
+
+    const controller = {
+        menuOpen() {
+            model.menuOpen()
+        },
+
+        menuClose() {
+            model.menuClose()
+        },
+    }
+
+    view.init()
+
 }
 
-burgerMenu.addEventListener('click', (event) => {
-    const header = document.querySelector('.header');
-
-    const blur = document.createElement('div')
-    const listContainer = document.createElement('div');
-    listContainer.classList.add('list-container');
-    const list = createList()
-
-    listContainer.append(list)
 
 
-
-    blur.setAttribute('id', 'cover');
-    blur.classList.add('page-cover');
-    header.classList.add('header-burger-menu');
-
-    burgerMenu.classList.add('burger-menu-opened');
-    burgerMenu.classList.remove('burger-menu-closed');
-
-    burgerMenuCloser.classList.add('burger-menu-closed');
-    burgerMenuCloser.classList.remove('burger-menu-opened');
-
-    document.body.insertBefore(blur, document.body.lastChild);
-    document.body.insertBefore(listContainer, document.body.lastChild);
-})
-
-burgerMenuCloser.addEventListener('click', (event) => {
-    const blur  = document.getElementById('cover');
-    const header = document.querySelector('.header');
-    const burgerList = document.querySelector('.list-container');
-
-    burgerList.remove()
-    blur.remove()
-    header.classList.remove('header-burger-menu');
-
-    burgerMenu.classList.add('burger-menu-closed');
-    burgerMenu.classList.remove('burger-menu-opened');
-
-
-    burgerMenuCloser.classList.add('burger-menu-opened');
-    burgerMenuCloser.classList.remove('burger-menu-closed');
-})
-
-function createList() {
-    const list = document.createElement('ul');
-    list.classList.add('burger-menu-list');
-
-    model.list.forEach((item) => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-
-        link.textContent = item.content;
-        link.setAttribute('href', item.link);
-
-        listItem.append(link);
-        list.append(listItem);
-    })
-
-    list.addEventListener('click', (event) => {
-        const blur  = document.getElementById('cover');
-        const header = document.querySelector('.header');
-        const burgerList = document.querySelector('.list-container');
-
-        burgerList.remove()
-        blur.remove()
-        header.classList.remove('header-burger-menu');
-
-        // потом создать MVC структуру и вынести эту функцию
-        burgerMenu.classList.add('burger-menu-closed');
-        burgerMenu.classList.remove('burger-menu-opened');
-
-        burgerMenuCloser.classList.add('burger-menu-opened');
-        burgerMenuCloser.classList.remove('burger-menu-closed');
-    })
-
-    return list;
-}

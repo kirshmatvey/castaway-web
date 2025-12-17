@@ -61,6 +61,21 @@ ul {
     top: 0;
 }
 
+.page-cover {
+    position: fixed; /* Фиксируем относительно viewport */
+    top: -100%;
+    left: 0;
+    width: 100%; /* 100% ширины viewport */
+    height: 100%; /* 100% высоты viewport */
+    background: rgba(25, 25, 25, 0.5); /* Полупрозрачный белый фон */
+    backdrop-filter: blur(25px); /* Эффект размытия фона */
+    z-index: 500; /* Чтобы был поверх всего */
+    transition: top 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -459,6 +474,14 @@ input[type="email"]::placeholder, input[type="text"]::placeholder {
     color: #118da8;
 }
 
+.page-cover a {
+    transition: 0.2s;
+}
+
+.page-cover a:hover {
+    color: #118da8;
+}
+
 .app-list li {
     transition: 0.2s;
 }
@@ -658,21 +681,6 @@ button:hover {
     }
 
     /*Стили для бургер меню*/
-
-    .page-cover {
-        position: fixed; /* Фиксируем относительно viewport */
-        top: -100%;
-        left: 0;
-        width: 100%; /* 100% ширины viewport */
-        height: 100%; /* 100% высоты viewport */
-        background: rgba(25, 25, 25, 0.5); /* Полупрозрачный белый фон */
-        backdrop-filter: blur(25px); /* Эффект размытия фона */
-        z-index: 500; /* Чтобы был поверх всего */
-        transition: top 0.3s ease-in-out;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
 
     .page-cover ul {
         position: relative;
